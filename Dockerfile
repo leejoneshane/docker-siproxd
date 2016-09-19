@@ -7,8 +7,8 @@ RUN apt-get update \
     && cd /root \
     && curl http://www.antisip.com/download/exosip2/libosip2-5.0.0.tar.gz -o libosip2.tar.gz \
     && tar -xzf libosip2.tar.gz \
-    && rm -rf libosip2.tar.gz  
-    && cd libosip2-5.0.0 
+    && rm -rf libosip2.tar.gz \
+    && cd libosip2-5.0.0 \
     && ./configure \
     && make \
     && make install
@@ -18,6 +18,7 @@ RUN cd /root/siproxd-0.8.2 \
     && ./configure \
     && make \
     && make install
-    
+
+ADD siproxd.conf /etc
 EXPOSE 5060/udp 7070-7080/udp
 CMD ["siproxd"]
