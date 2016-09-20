@@ -1,4 +1,4 @@
 #!/bin/bash
 
 ldconfig
-siproxd
+siproxd &
