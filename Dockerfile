@@ -2,7 +2,7 @@ FROM debian
 MAINTAINER leejoneshane@gmail.com
         
 RUN apt-get update \
-    && apt-get -y install gawk curl build-essential \
+    && apt-get -y install gawk curl vim build-essential \
     && apt-get clean all \
     && cd /root \
     && curl http://www.antisip.com/download/exosip2/libosip2-5.0.0.tar.gz -o libosip2.tar.gz \
