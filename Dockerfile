@@ -21,6 +21,8 @@ RUN cd /root/siproxd-0.8.2 \
 
 ADD siproxd.conf /etc
 ADD run-siproxd.sh /usr/sbin
-RUN chmod +x /usr/sbin/run-siproxd.sh
+RUN chmod +x /usr/sbin/run-siproxd.sh \
+    && mkdir /var/lib/siproxd \
+    && touch /var/lib/siproxd/siproxd_registrations
 EXPOSE 5060/udp 7070-7080/udp
 CMD ["run-siproxd.sh"]
