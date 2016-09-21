@@ -24,5 +24,5 @@ ADD run-siproxd.sh /usr/sbin
 RUN chmod +x /usr/sbin/run-siproxd.sh \
     && mkdir /var/lib/siproxd \
     && touch /var/lib/siproxd/siproxd_registrations
-EXPOSE 5060/udp 7070-7080/udp
+EXPOSE 5060/udp 7070-7089/udp
 CMD ["run-siproxd.sh"]
