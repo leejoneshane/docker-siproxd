@@ -7,6 +7,7 @@ Then, You must use console to change sip-proxy configure file (siproxd.conf), li
 docker exec -it sip-proxy bash
 
 \#>vi /etc/siproxd.conf
+
 \#>exit
 
 When You finish this job, restart the container by:
